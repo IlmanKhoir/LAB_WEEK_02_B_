@@ -8,6 +8,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import kotlin.text.uppercase
 import android.app.Activity
 import android.content.Intent
+import android.widget.Button
 class ResultActivity : AppCompatActivity() {
     companion object {
         private const val COLOR_KEY = "COLOR_KEY"
@@ -35,6 +36,11 @@ class ResultActivity : AppCompatActivity() {
                 findViewById<TextView>(R.id.color_code_result_message)
             resultMessage.text = getString(R.string.color_code_result_message,
                 colorCode?.uppercase())
+
+            val button : Button = findViewById(R.id.button)
+            button.setOnClickListener{
+                finish()
+            }
         }
     }
 }
