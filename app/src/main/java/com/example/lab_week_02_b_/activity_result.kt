@@ -37,10 +37,6 @@ class ResultActivity : AppCompatActivity() {
             resultMessage.text = getString(R.string.color_code_result_message,
                 colorCode?.uppercase())
 
-            val button : Button = findViewById(R.id.button)
-            button.setOnClickListener{
-                finish()
-            }
         }
     }
 }
